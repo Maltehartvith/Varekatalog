@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+</head>
+<body>
+
+<h1>Webshop - Product</h1>
+    <table>
+        <thead>
+        <th></th>
+        <th></th>
+        </thead>
+        <tr>
+            <td><b>Product ID:</b></td>
+            <td><span th:text="${product.id}" /></td>
+        </tr>
+        <tr>
+            <td><b>Product Name:</b></td>
+            <td><span th:text="${product.productName}" /></td>
+        </tr>
+        <tr>
+            <td><b>Product price:</b></td>
+            <td><span th:text="${product.price}" /></td>
+        </tr>
+    </table>
+</body>
+</html>

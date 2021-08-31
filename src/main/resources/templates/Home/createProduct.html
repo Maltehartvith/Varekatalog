@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+</head>
+<body>
+    <h1>Nordic Motorhomes</h1>
+
+    <form action="/createProduct" method="post">
+        <table>
+            <thead>
+            <th>Create Product</th>
+            <th></th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Product Name:</td>
+                <td><input type="text" name="productName" placeholder="Product name" required/></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" name="price" placeholder="Price" required></td>
+            </tr>
+            </tbody>
+        </table>
+            <button type="submit">Tilføj Produkt</button>
+    </form>
+</body>
+</html>

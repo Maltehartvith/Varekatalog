@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Webshop</title>
+</head>
+<body>
+    <h1>Webshop</h1>
+    <a href="/createProduct">
+        <button>
+            Create Product
+        </button>
+    </a>
+    <table>
+        <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product: ${products}" title="Click to View">
+            <td th:text="${product.id}"/>
+            <td th:text="${product.productName}"/>
+            <td th:text="${product.price}"/>
+
+            <td>
+                <a th:href="@{'/viewProduct/'+${product.id}}">
+                    <button>
+                        Se Info
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/updateProduct/'+${product.id}}">
+                    <button>
+                        Opdater
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/deleteProduct/'+${product.id}}">
+                    <button>
+                        Slet
+                    </button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
