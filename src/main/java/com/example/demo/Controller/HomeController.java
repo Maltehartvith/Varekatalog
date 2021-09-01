@@ -1,8 +1,7 @@
 package com.example.demo.Controller;
 
-import com.example.demo.Model.Product;
-import com.example.demo.Repository.ProductRepo;
-import com.example.demo.Service.ProductService;
+import com.example.demo.Model.Vare;
+import com.example.demo.Service.VareService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,41 +16,42 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    ProductService productService;
+    VareService vareService;
 
     @GetMapping("/")
     public String index(Model model){
-        List<Product> productList = productService.allProducts();
-        model.addAttribute("products", productList);
-        return "Home/index";
+        List<Vare> vareList = vareService.showAllVare();
+        model.addAttribute("vare", vareList );
+        return "/index";
     }
-    @GetMapping("/viewProduct/{id}")
-    public String viewProduct(@PathVariable("id") int id, Model model){
-        model.addAttribute("product", productService.findById(id));
-        return "Home/viewProduct";
+    @GetMapping("/viewVare/{id}")
+    public String viewVare(@PathVariable("id") int id, Model model){
+        model.addAttribute("vare", vareService.findVareById(id));
+        return "/Home/viewVare";
     }
-    @GetMapping("/updateProduct/{id}")
-    public String updateProduct(@PathVariable("id") int id, Model model){
-        model.addAttribute("product", productService.findById(id));
-        return "Home/updateProduct";
+    @GetMapping("/updateVare/{id}")
+    public String updateVare(@PathVariable("id") int id, Model model){
+        model.addAttribute("vare", vareService.findVareById(id));
+        return "/Home/updateVare";
     }
-    @PostMapping("/updateProduct")
-    public String updateProduct(@ModelAttribute Product p){
-        productService.updateProduct(p);
+    @PostMapping("/updateVare")
+    public String updateVare(@ModelAttribute Vare v){
+        vareService.updateVare(v);
         return "redirect:/";
     }
-    @GetMapping("/deleteProduct/{id}")
-    public String deleteProduct(@PathVariable("id") int id, Model model){
-        productService.deleteProduct(id);
+    @GetMapping("/deleteVare/{id}")
+    public String deleteVare(@PathVariable("id") int id, Model model){
+        vareService.deleteVare(id);
         return "redirect:/";
     }
-    @GetMapping("/createProduct")
-    public String createProduct(){
-        return "Home/createProduct";
+    @GetMapping("/createVare")
+    public String createVare(){
+        return "/Home/createVare";
     }
-    @PostMapping("/createProduct")
-    public String createProduct(@ModelAttribute Product p){
-        productService.createProduct(p);
+
+    @PostMapping("/createVare")
+    public String createVare(@ModelAttribute Vare v){
+        vareService.createVare(v);
         return "redirect:/";
     }
 

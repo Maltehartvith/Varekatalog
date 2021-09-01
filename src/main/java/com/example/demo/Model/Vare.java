@@ -1,11 +1,11 @@
 package com.example.demo.Model;
 
 
-public class Product {
+public class Vare {
 
     private int id;
-    private String productName;
-    private int price;
+    private String name;
+    private double price;
 
 
     public int getId() {
@@ -16,15 +16,15 @@ public class Product {
         this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -35,3 +35,4 @@ public class Product {
 
 
 }
+

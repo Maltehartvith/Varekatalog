@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Webshop</title>
+    <title>Webshop - new product</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Nordic Motorhomes</h1>
+    <h1>Webshop</h1>
 
-    <form action="/createProduct" method="post">
+    <form action="/createVare" method="post">
         <table>
             <thead>
             <th>Create Product</th>
@@ -16,11 +17,11 @@
             <tbody>
             <tr>
                 <td>Product Name:</td>
-                <td><input type="text" name="productName" placeholder="Product name" required/></td>
+                <td><input type="text" name="name" placeholder="Vare navn" required/></td>
             </tr>
             <tr>
                 <td>Price:</td>
-                <td><input type="text" name="price" placeholder="Price" required></td>
+                <td><input type="number" name="price" placeholder="Price" min="0" step="any" required></td>
             </tr>
             </tbody>
         </table>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Webshop - Update</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Webshop update</h1>
-    <form action="/updateProduct" method = "post">
+    <form action="/updateVare" method = "post">
         <table>
             <thead>
             <th></th>
@@ -17,15 +18,15 @@
             <tbody>
                 <tr>
                     <td>Product ID:</td>
-                    <td><input type="number" name="id" th:value="${product.id}" readonly></td>
+                    <td><input type="number" name="id" th:value="${vare.id}" readonly></td>
                 </tr>
                 <tr>
                     <td><b>Product name:</b></td>
-                    <td><input type="text" name="productName" th:value="${product.productName}" required></td>
+                    <td><input type="text" name="name" th:value="${vare.name}" required></td>
                 </tr>
                 <tr>
                     <td><b>Price :</b></td>
-                    <td><input type="number" name="price" th:value="${product.price}" required></td>
+                    <td><input type="number" name="price" th:value="${vare.price}" required></td>
                 </tr>
 
                 <input type="submit" value="Gem Ændringer">

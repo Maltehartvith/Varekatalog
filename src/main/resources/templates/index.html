@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link th:href="@{/style.css}" href="Home/style.css" rel="stylesheet" type="text/css">
+<title>Document</title>
+</head>
+<body style="display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+
+    <h1>Webshop</h1>
+
+    <table border=1 frame=void rules=rows style="text-align: center;">
+        <thead>
+        <tr>
+            <th style="padding: 4px; width: 15%"> ID </th>
+            <th style="padding: 4px; width: 15%"> Name </th>
+            <th style="padding: 4px; width: 15%"> Price </th>
+            <th style="padding: 7px; width: 0%"></th>
+            <th style="padding: 4px; width: 0%"></th>
+            <th style="padding: 4px; width: 0%"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vare: ${vare}" title="Click to View">
+            <td th:text="${vare.id}"/>
+            <td th:text="${vare.name}"/>
+            <td th:text="${vare.price}"/>
+
+            <td>
+                <a th:href="@{'/viewVare/'+${vare.id}}">
+                    <button>
+                        Se Info
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/updateVare/'+${vare.id}}">
+                    <button>
+                        Opdater
+                    </button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{'/deleteVare/'+${vare.id}}">
+                    <button>
+                        Slet
+                    </button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a style="color: inherit;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: aquamarine;"
+       href="/createVare">
+        New product
+    </a>
+
+</body>
+</html>
