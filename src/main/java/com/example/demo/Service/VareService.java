@@ -9,9 +9,10 @@ import java.util.List;
 
 @Service
 public class VareService {
+
+
     @Autowired
     VareRepo vareRepo;
-
 
     public List<Vare> showAllVare(){
         return vareRepo.showAllVare();
