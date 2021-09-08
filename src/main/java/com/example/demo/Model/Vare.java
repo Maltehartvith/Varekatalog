@@ -5,7 +5,7 @@ public class Vare {
 
     private int id;
     private String name;
-    private double price;
+    private int price;
 
 
     public int getId() {
@@ -24,7 +24,7 @@ public class Vare {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 

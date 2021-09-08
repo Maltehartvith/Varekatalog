@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Webshop</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link th:href="@{/style.css}" href="../static/style.css" rel="stylesheet" type="text/css">
 
+</head>
+<body style="display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+<a href="/" style="color: inherit; text-decoration: none;">
 <h1>Webshop - Product</h1>
-    <table>
+</a>
+    <table style="border-collapse: collapse; border: 1px solid black;" >
         <thead>
-        <th></th>
-        <th></th>
+        <tb><b>Product Name:</b></tb>
+        <tb><span th:text="${vare.name}" /></tb>
         </thead>
-        <tr>
-            <td><b>Product ID:</b></td>
-            <td><span th:text="${vare.id}" /></td>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;"><b>Product ID:</b></td>
+            <td style="border: 1px solid black;"><span th:text="${vare.id}" /></td>
         </tr>
-        <tr>
-            <td><b>Product Name:</b></td>
-            <td><span th:text="${vare.name}" /></td>
-        </tr>
-        <tr>
-            <td><b>Product price:</b></td>
-            <td><span th:text="${vare.price}" /></td>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;"><b>Product price:</b></td>
+            <td style="border: 1px solid black;"><span th:text="${vare.price}" /></td>
         </tr>
     </table>
 </body>

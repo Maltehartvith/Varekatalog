@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a, a:visited, a:hover, a:active{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*                                                TABLE MED ID                                                        */
+#tableMid4Input{
+    position: center;
+    text-align: left;
+}
+/*                                                  BUTTON CSS                                                        */
+.info-button{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 2px;
+    width: max-content;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+.delete-button{
+   color: inherit;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 3px;
+    width: 20px;
+    border-radius: 8px;
+    background-color: #bd2052;
+    margin: 5px;
+}
+
+.update-button{
+    background-color: #c2a41b;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 3px;
+    width: 20px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.create-product {
+    color: inherit;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: #18e545;
+
+}
+/*                                           CLASS TIL BUND KNAPPER                                                   */
+td.someBottn {
+    position: relative;
+    left: 53%;
+    bottom: -10px;
+    border: 0px;
+
+}
+td.someButtonIndex {
+    position: relative;
+    left: 75%;
+    bottom: -10px;
+    border-bottom: 0px;
+    border-top: 0px ;
+    border-right: 0px;
+    border-left: 0px;
+}
+/*                                                  SPECIEL DEFINERET CSS                                             */
+table.index-table {
+    border-collapse: collapse;
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    border-bottom: 0px;
+
+}
+.index-table tr td{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.update-table, td, tr{
+    border-collapse: collapse;
+    width: auto;
+    border: 0px;
+
+}
+
+.topkek {
+    border-bottom: 2px solid black;
+    width: auto;
+}
+
+/*                                                TABLE STANDARD                                                      */
+table{
+    border-collapse: collapse;
+    width: 80%;
+    display: inline-block;
+    position: absolute;
+    left: 42%;
+    top: 10%;
+    border-left: 1px solid black;
+}
+
+th{
+    background-color: lightgray;
+    text-align: center;
+    width: auto;
+
+}
+
+
+
+
